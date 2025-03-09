@@ -1,8 +1,8 @@
 {
-  "name": "@kcat/vue-common-components",
-  "version": "1.0.15-beta9",
-  "author": "Keyport Commercial Applications Team",
-  "description": "A collection of commonly used vue components specific to KCAT use.",
+  "name": "vue-common-components",
+  "version": "0.1.0",
+  "author": "Baker6Romeo",
+  "description": "A collection of commonly used vue components.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "private": false,
@@ -28,7 +28,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@kcat/user-wizard-services": "^1.4.20",
     "vue": "^3.5.13",
     "vuetify": "^3.7.6"
   },
