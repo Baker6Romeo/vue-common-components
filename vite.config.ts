@@ -16,10 +16,11 @@ export default defineConfig({
       fileName: (format) => (format === 'es' ? 'index.js' : 'index.cjs'),
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'vuetify'],
       output: {
         globals: {
           vue: 'Vue',
+          vuetify: 'Vuetify'
         },
       },
     },

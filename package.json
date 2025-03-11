@@ -27,10 +27,7 @@
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
-  "dependencies": {
-    "vue": "^3.5.13",
-    "vuetify": "^3.7.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.2",
@@ -47,5 +44,13 @@
     "vite": "^6.0.5",
     "vite-plugin-vue-devtools": "^7.6.8",
     "vue-tsc": "^2.1.10"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13",
+    "vuetify": "^3.7.6"
   }
+  // },
+  // "publishConfig": {
+  //   "registry": "https://registry.npmjs.org/"
+  // }
 }
