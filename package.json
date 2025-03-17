@@ -1,22 +1,21 @@
 {
-  "name": "vue-common-components",
-  "version": "0.1.1",
+  "name": "@b6r/vue-common-components",
+  "version": "1.0.15-beta22",
   "author": "Baker6Romeo",
   "description": "A collection of commonly used vue components.",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
   "private": false,
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./dist/vue-common-components.css"
   },
   "browser": {
-    "./styles.css": "./dist/style.css"
+    "./styles.css": "./dist/vue-common-components.css"
   },
-  "types": "./dist/common-components.vue.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "scripts": {
     "dev": "vite",
@@ -27,7 +26,10 @@
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@kcat/user-wizard-services": "^1.4.20",
+    "vite-plugin-vuetify": "^2.1.0"
+  },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.10.2",
@@ -48,8 +50,5 @@
   "peerDependencies": {
     "vue": "^3.5.13",
     "vuetify": "^3.7.6"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   }
 }

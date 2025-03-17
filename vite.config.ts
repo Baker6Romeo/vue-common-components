@@ -1,9 +1,13 @@
-import { fileURLToPath, URL } from 'node:url'
-import typescript2 from 'rollup-plugin-typescript2'
-import { defineConfig } from 'vite'
+// Plugins
 import vue from '@vitejs/plugin-vue'
+import typescript2 from 'rollup-plugin-typescript2'
 import vueDevTools from 'vite-plugin-vue-devtools'
-import path from 'path'
+import vuetify from 'vite-plugin-vuetify'
+
+// Utilities
+import path from 'node:path'
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,11 +20,13 @@ export default defineConfig({
       fileName: (format) => (format === 'es' ? 'index.js' : 'index.cjs'),
     },
     rollupOptions: {
-      external: ['vue', 'vuetify'],
+      external: ['vue', 'vuetify/lib'],
       output: {
         globals: {
           vue: 'Vue',
-          vuetify: 'Vuetify'
+          vuetify: 'Vuetify',
+          'vuetify/components': 'VuetifyComponents',
+          'vuetify/directives': 'VuetifyDirectives'
         },
       },
     },
@@ -28,6 +34,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
+    vuetify({autoImport: true}),
     // Must come after vue stuff or bad things happen
     typescript2({
       check: false,

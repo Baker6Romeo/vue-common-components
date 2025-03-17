@@ -1,11 +1,16 @@
 <script setup lang="ts">
     import EmployeeAutocomplete from './components/EmployeeAutocomplete.vue';
+    import YSwitchTheme from './components/YSwitchTheme.vue';
 </script>
 
 <template>
-  <body>
+  <div>
     <h3>Hello World</h3>
-    <EmployeeAutocomplete>
-    </EmployeeAutocomplete>
-  </body>
+    </div>
+    <div>
+    <EmployeeAutocomplete></EmployeeAutocomplete>
+    </div>
+    <div>
+      <y-switch-theme></y-switch-theme>
+    </div>
 </template>
