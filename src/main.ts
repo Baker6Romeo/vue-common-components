@@ -5,7 +5,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
 import App from './App.vue'
-import './assets/main.css'
+import './public/main.css'
 
 const vuetify = createVuetify({
   components,

@@ -10,7 +10,4 @@
     <div>
     <EmployeeAutocomplete></EmployeeAutocomplete>
     </div>
-    <div>
-      <y-switch-theme></y-switch-theme>
-    </div>
 </template>
